@@ -159,6 +159,9 @@ Model Selection
 In addition to the main Fit tool, the package also offers a ModelSelection option based on the Bayesian Information Criterion (BIC). This additional tool is experimental and not as thorough as the main Fit function. In particular, the models are generated with random start_values, which can influence the model fit and give different values for the BIC. The tool can help explore other possible models but should not be used to choose the best model at this time. ::
 
 	ms = piecewise_regression.ModelSelection(x, y, max_breakpoints=6)
+	
+	# The above line should be, replacing x, y with xx, yy (as x, y, returns not defined error
+	# ms = piecewise_regression.ModelSelection(xx, yy, max_breakpoints=6) 
 
 Example output: ::
 
